@@ -1,0 +1,50 @@
+//Hukum Newton//
+
+
+STORE "mass" to 600
+STORE ="acceleration" to 2
+STORE="force" without any value
+
+CALCULATE "mass" times "acceleration"
+SET "force" value with calculation result
+
+DISPLAY "force"
+
+
+
+//Tahun Kabisat//
+
+STORE "namaTahun" with any value
+
+  IF "namaTahun" mod 4 equal to 0 AND "nama Tahun" mod 100 not equal to 0
+     DISPLAY "Tahun Kabisat"
+  ELSE
+     IF "namaTahun" mod 400 equal to 0 
+         DISPLAY "Tahun Kabisat"
+     ELSE 
+         DISPLAY "Bukan Tahun Kabisat"
+
+
+  
+// Laundry Day//
+
+STORE "mesin cuci" with 0
+
+WHILE "mesin cuci" <= 20
+   ADD "mesin cuci" by 1
+
+DISPLAY "Maximum"
+
+
+
+//Periksa Kuku//
+
+WHILE "count" <=40
+
+  DISPLAY "murid"
+  IF "murid" equal to panjang
+    DISPLAY "Dihukum"
+  ELSE
+    DISPLAY "Dipuji"
+
+ 
