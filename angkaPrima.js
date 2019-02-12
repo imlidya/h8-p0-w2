@@ -2,7 +2,7 @@ function angkaPrima(angka) {
 
   for (var i = 2; i < angka; i++) {
     var divider = i;
-    var result = angka % pembagi;
+    var result = angka % divider;
     
     if (result === 0) {
       return false;
