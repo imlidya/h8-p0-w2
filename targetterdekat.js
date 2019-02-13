@@ -1,37 +1,37 @@
 function targetTerdekat(arr) {
-    // you can only write your code here!
-    var posisiO = 0;
+   
+    var counterO = 0;
     for(var i = 0; i < arr.length; i++) {
         if(arr[i] === 'o') {
-            posisiO = i;
+            counterO = i;
             break;
         }
     }
 
-    var posisiX = [];
+    var counterX = [];
     for(var i = 0; i < arr.length; i++) {
         if(arr[i] === 'x') {
-            posisiX.push(i);
+            counterX.push(i);
         }
     }
 
     var cari = 0;
-    var posisiTerdekat = [];
-    for(var i = 0; i < posisiX.length; i++) {
-        if(posisiX[i] - posisiO < 0) {
-            cari = posisiO - posisiX[i];
+    var counterTerdekat = [];
+    for(var i = 0; i < counterX.length; i++) {
+        if(counterX[i] - counterO < 0) {
+            cari = counterO - counterX[i];
         }else{
-            cari = posisiX[i] - posisiO;
+            cari = counterX[i] - counterO;
         }
-        posisiTerdekat.push(cari);
+        counterTerdekat.push(cari);
     }
-    posisiTerdekat.sort(function(value1, value2) { return value1 > value2 });
+    counterTerdekat.sort(function(value1, value2) { return value1 > value2 });
     
-    if(posisiTerdekat[0] === undefined) {
-        posisiTerdekat[0] = 0;
+    if(counterTerdekat[0] === undefined) {
+        counterTerdekat[0] = 0;
     }
 
-    return posisiTerdekat[0];
+    return counterTerdekat[0];
 }
 
   // TEST CASES
