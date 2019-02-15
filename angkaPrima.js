@@ -1,10 +1,10 @@
 function angkaPrima(angka) {
 
   for (var i = 2; i < angka; i++) {
-    var pembagi = i;
-    var inspector = angka % pembagi;
+    var divider = i;
+    var result = angka % divider;
     
-    if (inspector === 0) {
+    if (result === 0) {
       return false;
     }
   }
