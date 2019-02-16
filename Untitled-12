@@ -1,0 +1,42 @@
+var footballPlayer = {
+    {
+    name: 'Giroud'
+    height: 190
+    country: 'France'
+    pos: ['WF', 'CF']
+    goal: 10
+    },
+
+    {
+    name: 'Walcott'
+    height: 195
+    country: 'England'
+    pos: ['WF', 'CF']
+    goal: 30
+    },
+
+    {
+    name: 'Benzema'
+    height: 195
+    country: 'France'
+    pos: ['CF']
+    goal: 35
+    },
+
+    {
+    name: 'Sergio'
+    height: 185
+    country: 'Spain'
+    pos: ['MF']
+    goal: 15
+    },
+
+    {
+    name: 'Puyol'
+    height: '185'
+    country: 'Spain'
+    pos: ['CB']
+    goal: 15
+    },
+
+}
