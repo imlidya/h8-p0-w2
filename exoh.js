@@ -1,22 +1,21 @@
-function ExOh(str) { 
-    var x='';
-    var o='';
-    for(i=str.length-1; i>=0; i--){
-        if(str[i]=='x'){
-            x+='x';
-          console.log(x);
-        } else if(str[i]=='o'){
-            o+='o';
-          console.log(o);
+function xo(str) {
+    var countx=0
+    var counto=0
+    for(var i=0; i<str.length; i++){
+        if(str[i] === 'x'){
+            countx++
+        } else if(str[i] === 'o'){
+            counto++
         }
     }
-    var xNumber = x.length;
-    var oNumber = o.length;
-
-  return xNumber === oNumber; 
-         
+    if(countx === counto){
+        return true
+    } else {
+        return false
+    }
 }
-   
+
+// TEST CASES
 console.log(xo('xoxoxo')); // true
 console.log(xo('oxooxo')); // false
 console.log(xo('oxo')); // false
