@@ -1,9 +1,9 @@
 function cariMedian(arr) {
  
   if(arr.length%2 === 0) {
-    var akg1 = arr[arr.length/2-1];
-    var akg2 = arr[(arr.length/2)];
-    var result1 = (akg1+akg2)/2;
+    var counter1 = arr[arr.length/2-1];
+    var counter2 = arr[(arr.length/2)];
+    var result1 = (counter1+counter2)/2;
     return result1;
   }
   else {
