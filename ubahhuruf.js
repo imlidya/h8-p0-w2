@@ -1,20 +1,16 @@
-function ubahHuruf(kata) {
-
-var alph="abcdefghjklmnopqrstuvwxyz";
-var result='';
-
+function ubahHuruf(kata){
+  var alphabet = 'abcdefghijklmnopqrstuvwxyz'
+  var result = ''
   for(var i=0; i<kata.length; i++){
-    if(kata[i]==='z'){
-      result= result + 'a';
-    } else {
-      for(var j=0; j<alph.length; j++){
-        if(kata[i]===alph[j]){
-          result= result + alph[j+1];
-        }
+    for(var j=0; j<alphabet.length; j++){
+      if(kata[i] === alphabet[j]){
+        result += alphabet[j+1]
+      } else if(kata[i] === 'z'){
+        result += 'a'
       }
     }
   }
-  return result;
+  return result
 }
 
 // TEST CASES
