@@ -1,18 +1,18 @@
-function deepSum(arr) {
+function deepSum (arr) {
+ if(!arr.length){
+     return 'No Number'
+ }
+  var counter=0
+  for(var i=0; i<arr.length; i++){
+    for(var j=0; j<arr[i].length; j++){
+        for(var k=0; k<arr[i][j].length; k++){
+            // console.log(arr[i][j][k])
+            counter += arr[i][j][k]
 
- var counter= 0
- for(var i=0; i<arr.length; i++){
-   for(var j=0; j<arr[i].length; j++){
-    for(var k=0; k<arr[i][j].length; k++){
-      counter += arr[i][j][k]
+        }
     }
-   }
- }
-
- if(counter === 0){
-   return 'No Number'
- }
- return counter
+  }
+  return counter
 }
 
 //TEST CASE
