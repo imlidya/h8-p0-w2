@@ -1,22 +1,22 @@
 function highestScore (students) {
  
- var highestScore= {};
- for(var i=0; i<students.length; i++){
-   if(!highestScore[students[i]['class']]){
-     highestScore[students[i]['class']] = {
-       name: students[i]['name'],
-       score: students[i]['score']
-     }
+    var highestScore= {};
+    for(var i=0; i<students.length; i++){
+      if(!highestScore[students[i]['class']]){
+        highestScore[students[i]['class']] = {
+          name: students[i]['name'],
+          score: students[i]['score']
+        }
+      }
+       if(highestScore[students[i]['class']['score']] < students[i]['score']){
+        highestScore[students[i]['class']] = {
+          name: students[i]['name'],
+          score: students[i]['score']
+        }
+      }
+    }
+    return highestScore;
    }
-    if(highestScore[students[i]['class']['score']] < students[i]['score']){
-     highestScore[students[i]['class']] = {
-       name: students[i]['name'],
-       score: students[i]['score']
-     }
-   }
- }
- return highestScore;
-}
 
 // TEST CASE
 console.log(highestScore([
