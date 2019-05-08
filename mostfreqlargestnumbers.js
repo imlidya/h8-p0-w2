@@ -12,6 +12,7 @@ function sorting(arrNumber) {
 }
 
 function getTotal(arrNumber) {
+   // code di sini
     if (arrNumber.length === 0 ){
        return ''
    }
@@ -32,6 +33,7 @@ function getTotal(arrNumber) {
 
 
 function mostFrequentLargestNumbers(arrNumber) {
+   // code di sini
   var listSort = sorting(arrNumber)
   var countHighest = getTotal(listSort)
     
