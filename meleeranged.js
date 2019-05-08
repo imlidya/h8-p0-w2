@@ -1,35 +1,36 @@
 function meleeRangedGrouping (str) {
-  var arrAwal = str.split(',');
-  var arrSplit = [];
-  var arrMelee = [], arrRanged = [];
-  var hasil = [];
-  
-  if (str === '') {
-    return [];
-  }
-
-  for (var i = 0; i < arrAwal.length; i++) {
-    arrSplit.push(arrAwal[i].split('-'));
-  }
-  for (var j = 0; j < arrSplit.length; j++) {
-    if (arrSplit[j][1] === 'Melee') {
-      arrMelee.push(arrSplit[j][0]);
-    } else if (arrSplit[j][1] === 'Ranged') {
-      arrRanged.push(arrSplit[j][0]);
+    //your code here
+    if(!str.length){
+        return []
     }
+    var splitawal = str.split(',')
+    var temp = []
+    var ranged = []
+    var melee = []
+    var result = []
+    // console.log(split)
+    for(var i=0; i<splitawal.length; i++){
+        temp.push(splitawal[i].split('-'))
+    }
+    // console.log(temp)
+    for(var j=0; j<temp.length; j++){
+        if(temp[j][1] === 'Ranged'){
+            ranged.push(temp[j][0])
+            // console.log(ranged)
+        } else if(temp[j][1] === 'Melee'){
+            melee.push(temp[j][0])
+        }
+    }
+    result.push(ranged, melee)
+    return result
   }
   
-  hasil.push(arrRanged, arrMelee);
+  // TEST CASE
   
-  return hasil;
-}
-
-// TEST CASE
-
-console.log(meleeRangedGrouping('Razor-Ranged,Invoker-Ranged,Meepo-Melee,Axe-Melee,Sniper-Ranged'));
-// [ ['Razor', 'Invoker', 'Sniper'], ['Meepo', 'Axe'] ]
-
-console.log(meleeRangedGrouping('Drow Ranger-Ranged,Chen-Ranged,Dazzle-Ranged,Io-Ranged'));
-// [ ['Drow Ranger', 'Chen', 'Dazzle', 'Io'], [] ]
-
-console.log(meleeRangedGrouping('')); // []
+  console.log(meleeRangedGrouping('Razor-Ranged,Invoker-Ranged,Meepo-Melee,Axe-Melee,Sniper-Ranged'));
+  // [ ['Razor', 'Invoker', 'Sniper'], ['Meepo', 'Axe'] ]
+  
+  console.log(meleeRangedGrouping('Drow Ranger-Ranged,Chen-Ranged,Dazzle-Ranged,Io-Ranged'));
+  // [ ['Drow Ranger', 'Chen', 'Dazzle', 'Io'], [] ]
+  
+  console.log(meleeRangedGrouping('')); // []
