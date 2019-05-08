@@ -1,25 +1,7 @@
-// function hapusSimbol(str) {
-//   if(str.length === 0){
-//     return ""
-//   } else {
-//     var alphNum = "abcdefghijklmnopqrstuvwxyz0123456789";
-//     var modifStr = str.substring(1, str.length);
-//     var word = ""
-//     for(var i = 0; i < alphNum.length; i++){
-//       if(str[0] === alphNum[i]){
-//         word += str[0]
-//       }
-//     }
-//   }
-//   return word + hapusSimbol(modifStr)
-// }
-
-//pakeregex
-
 function hapusSimbol(str){
 
-  var untukRegex= str.match(/[a-z0-9]+/gi)
-  return untukRegex.join('')
+  var regex= str.match(/[a-z0-9]+/gi)
+  return regex.join('')
 
 }
 console.log(hapusSimbol('test%$4aa')); // test4aa
